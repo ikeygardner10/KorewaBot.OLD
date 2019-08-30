@@ -5,7 +5,7 @@ const member = message.mentions.members.first()
 	}
 	if (message.author.id === member.user.id) {
 		message.reply(
-			`you turned yourself in to the authorites... <what:468306439623147523>`
+			`you turned yourself in to the authorites... <:what:468306439623147523>`
 		)
 	}
 	else {
