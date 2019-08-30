@@ -1,5 +1,7 @@
 module.exports = message => {
 const member = message.mentions.members.first()
+var fs = require('fs');
+var raid = fs.readdirSync("/home/ikey/Documents/GitHub/KorewaBot/images/Raid/")
 	if (!member) {
 	  return message.reply(
 		`who are you trying to raid? You must mention a user.`
@@ -8,12 +10,11 @@ const member = message.mentions.members.first()
 	else if (message.author.id === member.user.id) {
 		message.reply(
 			`you swatted yourself... <:NeutralClown:605078235545600026>`, {
-				file: "/home/ikey/Documents/GitHub/KorewaBot/images/fbi.gif"
+				file: "/home/ikey/Documents/GitHub/KorewaBot/images/raid.gif"
 		})
 	}
 	else {
 	message.channel.send(`Currently, at ${member}'s house:`, {
-		file: "/home/ikey/Documents/GitHub/KorewaBot/images/fbi.gif"
-	});
+		file: "/home/ikey/Documents/GitHub/KorewaBot/images/Raid/" + `${raid[(Math.floor(Math.random() * raid.length))]}`});
 	}
 }
