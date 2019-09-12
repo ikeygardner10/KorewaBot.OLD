@@ -1,29 +1,25 @@
 module.exports = message => {
-	const Discord = require('discord.js')
-	const member = message.mentions.members.first();
-	const collector = new Discord.MessageCollector(message.channel, m => m.author.id === member.user.id, { time: 20000 });
-	var fs = require('fs');
-	var hh = fs.readdirSync("/home/ikey/Documents/GitHub/KorewaBot/images/HandHold/")
-	if (!member) {
-		message.reply(`who are you asking? You must mention a user.`)
-		return
+var fs = require('fs');
+var hh = fs.readdirSync("/home/ikey/Documents/GitHub/KorewaBot/images/HandHold/")
+const member = message.mentions.members.first();
+const author = message.author;
+const filter = m => m.content.toLowerCase().includes('yes') && m.author.id === member.id;
+	
+	if(!member) {
+		return message.reply(`who are you trying to hold hands with? You must mention a user.`)
 	}
-	else if (message.author.id === member.user.id) {
-		message.reply(`you weirdo :neutral: :pensive:`)
-		return
+	if(message.author.id === member.user.id) {
+		return message.reply(`you can't hold hands with yourself... :neutral_face:`)
 	}
-	message.channel.send(`${member}, ${message.author} wants to hold your hand... :sweat_smile: Do you want to as well? :flushed: (y/n)`)
-	const author = message.author;
-		collector.on('collect', message => {
-				if (message.content === 'y' ) {
-					message.channel.send(`${author} & ${member}, cute :heart:`, {
-						file: "/home/ikey/Documents/GitHub/KorewaBot/images/HandHold/"  + `${hh[(Math.floor(Math.random() * hh.length))]}`})
-					return;
-				}
-				else if (message.content === 'n' ) {
-					message.channel.send(`${member}, damn... :open_mouth: :pensive:`, {
-						file: "/home/ikey/Documents/GitHub/KorewaBot/images/handholdingno.gif"})
-					return;
-				}
-		});
+	
+	message.channel.send(`${member}, ${author} wants to hold your hand <:omgomgomg:621117976040439808> Do you accept!? :flushed: (yes/no)`).then(() => {
+		message.channel.awaitMessages(filter, { maxMatches: 1, time: 15000, errors: ['time'] }) 
+			.then(collected => {
+				message.channel.send(`${member} & ${author}, cute! :heart:`, {
+					file: "/home/ikey/Documents/GitHub/KorewaBot/images/HandHold/" + `${hh[(Math.floor(Math.random() * hh.length))]}`});
+			})
+			.catch(collected => {
+				message.channel.send(`No response :pensive: (15 second time out)`)
+			});
+	});
 }

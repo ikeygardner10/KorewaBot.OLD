@@ -18,9 +18,9 @@ const gn = require('../commands/gn')
 const handhold = require('../commands/handhold')
 const hansen = require('../commands/hansen')
 const hello = require('../commands/hello')
-const help = require('../commands/help')
 const hug = require('../commands/hug')
 const ikey = require('../commands/ikey')
+const info = require('../commands/info')
 const invite = require('../commands/invite')
 const jariel = require('../commands/jariel')
 const jontron = require('../commands/jontron')
@@ -61,7 +61,7 @@ const vore = require('../commands/vore')
 const waifu = require('../commands/waifu')
 const welcome = require('../commands/welcome/welcome')
 const xjared = require('../commands/xjared')
-const yes = require('../commands/yes')
+const yes = require('../commands/yes') 
 
 module.exports = (client, message) => {
 	if (message.content.includes('@KorewaBot')) {
@@ -127,14 +127,14 @@ module.exports = (client, message) => {
 	if (message.content.startsWith('$hello')) {
 		return hello(message)
 	}
-	if (message.content.startsWith('$help')) {
-		return help(message)
-	}
 	if (message.content.startsWith('$hug')) {
 		return hug(message)
 	}
 	if (message.content.startsWith('$ikey')) {
 		return ikey(message)
+	}
+	if (message.content.startsWith('$info')) {
+		return info(message)
 	}
 	if (message.content.startsWith('$invite')) {
 		return invite(message)
