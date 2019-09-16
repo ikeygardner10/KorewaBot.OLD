@@ -6,6 +6,7 @@ const bruj = require('../commands/bruj')
 const cbt = require('../commands/cbt')
 const crazi77 = require('../commands/crazi77')
 const crazimo = require('../commands/crazimo')
+const cuddle = require('../commands/cuddle')
 const cursed = require('../commands/cursed')
 const cyclone = require('../commands/cyclone')
 const decypher = require('../commands/decypher')
@@ -49,6 +50,7 @@ const raid = require('../commands/raid')
 const rape = require('../commands/rape')
 const razor = require('../commands/razor')
 const sair = require('../commands/sair')
+const server = require('../commands/server')
 const shoot = require('../commands/shoot')
 const slap = require('../commands/slap')
 const smug = require('../commands/smug')
@@ -57,6 +59,7 @@ const spank = require('../commands/spank')
 const stab = require('../commands/stab')
 const tights = require('../commands/tights')
 const tubby = require('../commands/tubby')
+const vmeme = require('../commands/vmeme')
 const vore = require('../commands/vore')
 const waifu = require('../commands/waifu')
 const welcome = require('../commands/welcome/welcome')
@@ -90,6 +93,9 @@ module.exports = (client, message) => {
 	}
 	if (message.content.startsWith('$crazi')) {
 		return crazi77(message)
+	}
+	if (message.content.startsWith('$cuddle')) {
+		return cuddle(message)
 	}
 	if (message.content.startsWith('$cursed')) {
 		return cursed(message)
@@ -126,6 +132,9 @@ module.exports = (client, message) => {
 	}
 	if (message.content.startsWith('$hello')) {
 		return hello(message)
+	}
+	if (message.content.startsWith('$help')) {
+		return info(message)
 	}
 	if (message.content.startsWith('$hug')) {
 		return hug(message)
@@ -220,6 +229,9 @@ module.exports = (client, message) => {
 	if (message.content.startsWith('$sair')) {
 		return sair(message)
 	}
+	if (message.content.startsWith('$server')) {
+		return server(message)
+	}
 	if (message.content.startsWith('$shoot')) {
 		return shoot(message)
 	}
@@ -243,6 +255,10 @@ module.exports = (client, message) => {
 	}
 	if (message.content.startsWith('$tubby')) {
 		return tubby(message)
+	}
+	if (message.content.startsWith('$vmeme')) {
+		return vmeme(message)
+		return
 	}
 	if (message.content.startsWith('$vore')) {
 		return vore(message)

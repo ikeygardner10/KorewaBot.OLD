@@ -1,7 +1,5 @@
 module.exports = (message) => {
 const Discord = require('discord.js');
-const botsTotal = message.guild.members.filter(member => member.user.bot).size;
-const usersTotal = message.guild.members.filter(member => !member.user.bot).size;
 
 var uptime = process.uptime();
 const date = new Date(uptime*1000);
@@ -26,9 +24,6 @@ const embed1 = new Discord.RichEmbed()
 	.addField(`Invite`, `[Link](https://discordapp.com/api/oauth2/authorize?client_id=599430180452433921&permissions=8&scope=bot)`, true)
 	.addField(`GitHub`, `[Link](https://github.com/ikeygardner10/KorewaBot)`, true)
 	.addField(`Developer`, `ikey.#0911`, true)
-	.addField(`Guild Owner`, `${message.guild.owner}`, true)
-	.addField(`Total Guild Bots`, `${botsTotal}`, true)
-	.addField(`Total Guild Users`, `${usersTotal}`, true)
 	.addBlankField()
 	.addField(`Version`, `1.0`, true)
 	.addField(`Node JS`, `12.8.1`, true)
@@ -48,9 +43,6 @@ const embed2 = new Discord.RichEmbed()
 	.addField(`Invite`, `[Link](https://discordapp.com/api/oauth2/authorize?client_id=599430180452433921&permissions=8&scope=bot)`, true)
 	.addField(`GitHub`, `[Link](https://github.com/ikeygardner10/KorewaBot)`, true)
 	.addField(`Developer`, `ikey.#0911`, true)
-	.addField(`Guild Owner`, `${message.guild.owner}`, true)
-	.addField(`Total Guild Bots`, `${botsTotal}`, true)
-	.addField(`Total Guild Users`, `${usersTotal}`, true)
 	.setFooter("Suggestions go in the creators/support server", "https://i.imgur.com/7Wy9aSB.png")
 	.setTimestamp()
 	.setColor(0xFFE18F);
