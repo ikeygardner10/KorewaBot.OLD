@@ -8,7 +8,7 @@ const crazi77 = require('../commands/crazi77')
 const crazimo = require('../commands/crazimo')
 const cuddle = require('../commands/cuddle')
 const cursed = require('../commands/cursed')
-const cyclone = require('../commands/cyclone')
+const cutie = require('../commands/cutie')
 const decypher = require('../commands/decypher')
 const eden = require('../commands/eden')
 const feet = require('../commands/feet')
@@ -16,6 +16,7 @@ const fuck = require ('../commands/fuck')
 const gay = require('../commands/gay')
 const gm = require('../commands/gm')
 const gn = require('../commands/gn')
+const googleimage = require('../commands/googleimage')
 const handhold = require('../commands/handhold')
 const hansen = require('../commands/hansen')
 const hello = require('../commands/hello')
@@ -26,14 +27,13 @@ const invite = require('../commands/invite')
 const jariel = require('../commands/jariel')
 const jontron = require('../commands/jontron')
 const juckshuk = require('../commands/juckshuk')
-const jupiter = require('../commands/jupiter')
-const justin = require('../commands/justin')
 const kaji = require('../commands/kaji')
 const kick = require('../commands/kick')
 const kiss = require('../commands/kiss')
 const konata = require('../commands/konata')
 const krisku = require('../commands/krisku')
 const kyonko = require('../commands/kyonko')
+const lewd = require('../commands/lewd')
 const mackie = require('../commands/mackie')
 const maho = require('../commands/maho')
 const mashrep = require('../commands/mashrep')
@@ -46,9 +46,11 @@ const paradise = require('../commands/paradise')
 const pet = require('../commands/pet')
 const poopies = require('../commands/poopies')
 const punch = require('../commands/punch')
+const pururin = require('../commands/pururin')
 const raid = require('../commands/raid')
 const rape = require('../commands/rape')
 const razor = require('../commands/razor')
+const run = require('../commands/run')
 const sair = require('../commands/sair')
 const server = require('../commands/server')
 const shoot = require('../commands/shoot')
@@ -59,16 +61,19 @@ const spank = require('../commands/spank')
 const stab = require('../commands/stab')
 const tights = require('../commands/tights')
 const tubby = require('../commands/tubby')
-const vmeme = require('../commands/vmeme')
+const secretmemenoedenallowed = require('../commands/secretmemenoedenallowed')
+const vanessa = require('../commands/vanessa')
 const vore = require('../commands/vore')
 const waifu = require('../commands/waifu')
 const welcome = require('../commands/welcome/welcome')
-const xjared = require('../commands/xjared')
 const yes = require('../commands/yes') 
 
 module.exports = (client, message) => {
 	if (message.content.includes('@KorewaBot')) {
 		message.reply(`fuck off cunt :joy:`)
+	}
+	if (message.content.startsWith('$vanessa')) {
+		return vanessa(message)
 	}
 	if (message.content.startsWith('$alen')) {
 		return alen(message)
@@ -100,8 +105,8 @@ module.exports = (client, message) => {
 	if (message.content.startsWith('$cursed')) {
 		return cursed(message)
 	}
-	if (message.content.startsWith('$cyclone')) {
-		return cyclone(message)
+	if (message.content.startsWith('$cutie')) {
+		return cutie(message)
 	}
 	if (message.content.startsWith('$decypher')) {
 		return decypher(message)
@@ -123,6 +128,9 @@ module.exports = (client, message) => {
 	}
 	if (message.content.startsWith('$gn')) {
 		return gn(message)
+	}
+	if (message.content.startsWith('$img')) {
+		return googleimage(message)
 	}
 	if (message.content.startsWith('$hh')) {
 		return handhold(message)
@@ -157,12 +165,6 @@ module.exports = (client, message) => {
 	if (message.content.startsWith('$juck')) {
 		return juckshuk(message)
 	}
-	if (message.content.startsWith('$jupiter')) {
-		return jupiter(message)
-	}
-	if (message.content.startsWith('$justin')) {
-		return justin(message)
-	}
 	if (message.content.startsWith('$kaji')) {
 		return kaji(message)
 	}
@@ -180,6 +182,9 @@ module.exports = (client, message) => {
 	}
 	if (message.content.startsWith('$kyonko')) {
 		return kyonko(message)
+	}
+	if (message.content.startsWith('$lewd')) {
+		return lewd(message)
 	}
 	if (message.content.startsWith('$mackie')) {
 		return mackie(message)
@@ -217,6 +222,9 @@ module.exports = (client, message) => {
 	if (message.content.startsWith('$punch')) {
 		return punch(message)
 	}
+	if (message.content.startsWith('$pururin')){
+		return pururin(message)
+	}
 	if (message.content.startsWith('$raid')) {
 		return raid(message)
 	}
@@ -225,6 +233,9 @@ module.exports = (client, message) => {
 	}
 	if (message.content.startsWith('$razor')) {
 		return razor(message)
+	}
+	if (message.content.startsWith('$run')) {
+		return run(message)
 	}
 	if (message.content.startsWith('$sair')) {
 		return sair(message)
@@ -256,11 +267,13 @@ module.exports = (client, message) => {
 	if (message.content.startsWith('$tubby')) {
 		return tubby(message)
 	}
-	if (message.content.startsWith('$vmeme')) {
-		return vmeme(message)
-		return
+	if (message.content.startsWith('$unban')) {
+		return unban(message)
 	}
-	if (message.content.startsWith('$vore')) {
+	if (message.content.startsWith('$secretmemenoedenallowed')) {
+		return secretmemenoedenallowed(message)
+	}
+	if (message.content.includes('$vore')) {
 		return vore(message)
 	}
 	if (message.content.startsWith('$waifu')) {
@@ -268,9 +281,6 @@ module.exports = (client, message) => {
 	}
 	if (message.content.startsWith('$welcome')) {
 		return welcome(message)
-	}
-	if (message.content.startsWith('$xjared')) {
-		return xjared(message)
 	}
 	if (message.content.startsWith('$yes')) {
 		return yes(message)

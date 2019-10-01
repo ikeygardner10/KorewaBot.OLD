@@ -7,6 +7,7 @@ const client = new Discord.Client({
     disabledEvents: ['TYPING_START']
 })
 const guildNames = client.guilds.array();
+require('dotenv').config()
 
 client.on("message", async message => {
     if(message.author.bot || message.system) return; // Ignore bots
@@ -18,7 +19,7 @@ client.on("message", async message => {
         let msg = message.content.slice(config.prefix.length); // slice of the prefix on the message
         let args = msg.split(" "); // break the message into part by spaces
         let cmd = args[0].toLowerCase(); // set the first word as the command in lowercase just in case
-        args.shift(); // delete the first word from the args
+        args.shift().toLowerCase(); // delete the first word from the args
 	}
 })
 

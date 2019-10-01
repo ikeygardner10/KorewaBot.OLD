@@ -2,6 +2,10 @@ module.exports = message => {
 	const member = message.mentions.members.first()
 	var fs = require('fs');
 	var rape = fs.readdirSync("/home/ikey/Documents/GitHub/KorewaBot/images/Rape/")
+	//if (message.member.highestRole.id == "540347917358071818") {
+	//	message.reply(`no rape for first years! Too young! :triumph:`)
+	//	return;
+	//}
 	if (!member) {
 	  return message.reply(
 		`who are you trying to rape? You must mention a user.`

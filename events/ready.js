@@ -1,8 +1,8 @@
 module.exports = client => {
 	client.user.setPresence({
 		game: {
-			name: 'you sleep',
-			type: 'WATCHING',
+			name: 'with Jariel\'s Mom 🤤',
+			type: 'PLAYING',
 			url: 'https://twitter.com/_ikey_'
 		}
 	})
