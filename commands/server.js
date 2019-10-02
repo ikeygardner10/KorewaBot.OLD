@@ -27,7 +27,7 @@ const embed = new Discord.RichEmbed()
 	.addField(`Voice Channels`, `${vcount}`, true)
 	.setFooter(`KorewaBot`, "https://i.imgur.com/7Wy9aSB.png")
 	.setTimestamp()
-	.setColor(0xFFE18F);
+	.setColor(0xFF2E2E);
 
 	message.channel.send(embed)
 		return;

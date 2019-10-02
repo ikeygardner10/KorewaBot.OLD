@@ -33,7 +33,7 @@ const embed1 = new Discord.RichEmbed()
 	.addField(`Users`, `${message.client.users.size}`, true)
 	.setFooter("Suggestions go in the creators/support server", "https://i.imgur.com/7Wy9aSB.png")
 	.setTimestamp()
-	.setColor(0x0000FF);
+	.setColor(0xFF2E2E);
 	
 const embed2 = new Discord.RichEmbed()
 	.setAuthor(`KorewaBot | 酒`, "https://i.imgur.com/7Wy9aSB.png")
