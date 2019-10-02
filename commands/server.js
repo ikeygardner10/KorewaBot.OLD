@@ -5,6 +5,8 @@ const usersTotal = message.guild.members.filter(member => !member.user.bot).size
 const rolesTotal = message.guild.roles.size;
 const emojisTotal = message.guild.emojis.size;
 const txtchTotal = message.guild.channels.size;
+let tcount = message.guild.channels.filter(c => c.type === 'text').size;
+let vcount = message.guild.channels.filter(c => c.type === 'voice').size;
 
 const embed = new Discord.RichEmbed()
 	.setAuthor(`Server Information 😜`, "https://i.imgur.com/7Wy9aSB.png")
@@ -21,12 +23,12 @@ const embed = new Discord.RichEmbed()
 	.addField(`Emoji Count`, `${emojisTotal}`, true)
 	.addField(`Users`, `${usersTotal}`, true)
 	.addField(`Bot Count`, `${botsTotal}`, true)
-	.addField(`Text Channels`, `${txtchTotal}`. true)
+	.addField(`Text Channels`, `${tcount}`, true)
+	.addField(`Voice Channels`, `${vcount}`, true)
 	.setFooter(`KorewaBot`, "https://i.imgur.com/7Wy9aSB.png")
 	.setTimestamp()
 	.setColor(0xFFE18F);
 
 	message.channel.send(embed)
-	console.log(`${message.guild.iconURL}`)
 		return;
 }

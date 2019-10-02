@@ -1,4 +1,12 @@
-module.exports = message => {
-	const user = message.mentions.users.first() || message.author;
-	return message.channel.send(`${user}'s avatar: ${user.displayAvatarURL}`);
+module.exports = (message) => {
+const Discord = require('discord.js');
+const user = message.mentions.users.first() || message.author;
+const avatar = user.displayAvatarURL;
+let embed1 = new Discord.RichEmbed()
+	.setImage(avatar)
+	.setFooter(`${user.username}'s Avatar`)
+	.setColor(0xFF2E2E);
+
+	message.channel.send(embed1)
+	return;
 }

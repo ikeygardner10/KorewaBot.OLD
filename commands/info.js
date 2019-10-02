@@ -48,7 +48,7 @@ const embed2 = new Discord.RichEmbed()
 	.addField(`Snapchat`, `ikeygardner10`, true)
 	.setFooter("Suggestions go in the creators/support server", "https://i.imgur.com/7Wy9aSB.png")
 	.setTimestamp()
-	.setColor(0xFFE18F);
+	.setColor(0xFF2E2E);
 
 	if (message.author.id === "341086875232108545") {
 		message.channel.send(embed1)
