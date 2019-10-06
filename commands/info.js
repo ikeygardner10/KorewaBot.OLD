@@ -31,9 +31,12 @@ const embed1 = new Discord.RichEmbed()
 	.addField(`Uptime`, `${dateString}`, true)
 	.addField(`Servers`, `${message.client.guilds.size}`, true)
 	.addField(`Users`, `${message.client.users.size}`, true)
+	.addBlankField()
+	.addField(`Twitter`, `[@_ikey_](https://twitter.com/_ikey_)\n[@_sair_](https://twitter.com/kibashippuden1)`, true)
+	.addField(`Snapchat`, `ikeygardner10\nsarozkader`, true)
 	.setFooter("Suggestions go in the creators/support server", "https://i.imgur.com/7Wy9aSB.png")
 	.setTimestamp()
-	.setColor(0xFF2E2E);
+	.setColor(0x4F5450);
 	
 const embed2 = new Discord.RichEmbed()
 	.setAuthor(`KorewaBot | 酒`, "https://i.imgur.com/7Wy9aSB.png")
@@ -44,11 +47,11 @@ const embed2 = new Discord.RichEmbed()
 	.addField(`GitHub`, `[Link](https://github.com/ikeygardner10/KorewaBot)`, true)
 	.addField(`Developer`, `ikey.#0911`, true)
 	.addBlankField()
-	.addField(`Twitter`, `[@_ikey_](https://twitter.com/_ikey_)`, true)
-	.addField(`Snapchat`, `ikeygardner10`, true)
+	.addField(`Twitter`, `[@_ikey_](https://twitter.com/_ikey_)\n[@_sair_](https://twitter.com/kibashippuden1)`, true)
+	.addField(`Snapchat`, `ikeygardner10\nsarozkader`, true)
 	.setFooter("Suggestions go in the creators/support server", "https://i.imgur.com/7Wy9aSB.png")
 	.setTimestamp()
-	.setColor(0xFF2E2E);
+	.setColor(0x4F5450);
 
 	if (message.author.id === "341086875232108545") {
 		message.channel.send(embed1)

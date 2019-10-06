@@ -5,7 +5,7 @@ const avatar = user.displayAvatarURL;
 let embed1 = new Discord.RichEmbed()
 	.setImage(avatar)
 	.setFooter(`${user.username}'s Avatar`)
-	.setColor(0xFF2E2E);
+	.setColor(0x4F5450);
 
 	message.channel.send(embed1)
 	return;

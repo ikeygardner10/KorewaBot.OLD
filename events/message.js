@@ -20,6 +20,7 @@ const googleimage = require('../commands/googleimage')
 const handhold = require('../commands/handhold')
 const hansen = require('../commands/hansen')
 const hello = require('../commands/hello')
+const help = require('../commands/help')
 const hug = require('../commands/hug')
 const ikey = require('../commands/ikey')
 const info = require('../commands/info')
@@ -142,7 +143,7 @@ module.exports = (client, message) => {
 		return hello(message)
 	}
 	if (message.content.startsWith('$help')) {
-		return info(message)
+		return help(message)
 	}
 	if (message.content.startsWith('$hug')) {
 		return hug(message)
