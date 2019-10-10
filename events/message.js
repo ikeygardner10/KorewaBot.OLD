@@ -43,19 +43,23 @@ const meme = require('../commands/meme')
 const memri = require('../commands/memri')
 const monkey = require('../commands/monkey')
 const naenae = require('../commands/naenae')
+const nword = require('../commands/nword')
 const paradise = require('../commands/paradise')
 const pet = require('../commands/pet')
 const poopies = require('../commands/poopies')
 const punch = require('../commands/punch')
+const purge = require('../commands/purge')
 const pururin = require('../commands/pururin')
 const raid = require('../commands/raid')
 const rape = require('../commands/rape')
 const razor = require('../commands/razor')
+const roles = require('../commands/roles')
 const run = require('../commands/run')
 const sair = require('../commands/sair')
 const server = require('../commands/server')
 const shoot = require('../commands/shoot')
 const slap = require('../commands/slap')
+const sleepy = require('../commands/sleepy')
 const smug = require('../commands/smug')
 const snorcz = require('../commands/snorcz')
 const spank = require('../commands/spank')
@@ -67,12 +71,21 @@ const vanessa = require('../commands/vanessa')
 const vore = require('../commands/vore')
 const waifu = require('../commands/waifu')
 const welcome = require('../commands/welcome/welcome')
-const yes = require('../commands/yes') 
+const yes = require('../commands/yes')
 
 module.exports = (client, message) => {
-	if (message.content.includes('@KorewaBot')) {
-		message.reply(`fuck off cunt :joy:`)
-	}
+//	if (message.content.includes('nigger')) {
+//		return nword(message)
+//	}
+//	if (message.content.includes('nigga')) {
+//		return nword(message)
+//	}
+//	if (message.content.includes('Nigger')) {
+//		return nword(message)
+//	}
+//	if (message.content.includes('Nigga')) {
+//		return nword(message)
+//	}
 	if (message.content.startsWith('$vanessa')) {
 		return vanessa(message)
 	}
@@ -223,6 +236,9 @@ module.exports = (client, message) => {
 	if (message.content.startsWith('$punch')) {
 		return punch(message)
 	}
+	if (message.content.startsWith('$purge')) {
+		return purge(message)
+	}
 	if (message.content.startsWith('$pururin')){
 		return pururin(message)
 	}
@@ -234,6 +250,9 @@ module.exports = (client, message) => {
 	}
 	if (message.content.startsWith('$razor')) {
 		return razor(message)
+	}
+	if (message.content.startsWith('$roles')) {
+		return roles(message)
 	}
 	if (message.content.startsWith('$run')) {
 		return run(message)
@@ -249,6 +268,9 @@ module.exports = (client, message) => {
 	}
 	if (message.content.startsWith('$slap')) {
 		return slap(message)
+	}
+	if (message.content.startsWith('$sleepy')) {
+		return sleepy(message)
 	}
 	if (message.content.startsWith('$smug')) {
 		return smug(message)

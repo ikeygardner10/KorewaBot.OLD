@@ -4,7 +4,7 @@ const botsTotal = message.guild.members.filter(member => member.user.bot).size;
 const usersTotal = message.guild.members.filter(member => !member.user.bot).size;
 const rolesTotal = message.guild.roles.size;
 const emojisTotal = message.guild.emojis.size;
-const txtchTotal = message.guild.channels.size;
+const boostTotal = message.guild.premium_subscription_count;
 let tcount = message.guild.channels.filter(c => c.type === 'text').size;
 let vcount = message.guild.channels.filter(c => c.type === 'voice').size;
 
@@ -16,7 +16,7 @@ const embed = new Discord.RichEmbed()
 	.addField(`Owner`, `${message.guild.owner}`, true)
 	.addField(`Region`, `${message.guild.region}`, true)
 	.addField(`Verification`, `${message.guild.verificationLevel}`, true)
-	.addField(`Boost Count`, `Maintenance`, true)
+	.addField(`Boost Count`, `${boostTotal}`, true)
 	.addField(`Created`, `${message.guild.createdAt}`, true)
 	.addBlankField()
 	.addField(`Role Count`, `${rolesTotal}`, true)

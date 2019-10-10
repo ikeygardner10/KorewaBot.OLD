@@ -16,6 +16,10 @@ module.exports = message => {
 			`${member} raped themselves! :open_mouth: Don't ask me how that works :confused:`
 		)
 	}
+	else if (message.author.id == "456126810493812766") {
+		message.reply(`lol no you don't`)
+		return;
+	}
 	else {
 		message.reply(`you raped ${member}! :drool: :smiling_imp:`, {
 		file: "/home/ikey/Documents/GitHub/KorewaBot/images/Rape/" + `${rape[(Math.floor(Math.random() * rape.length))]}`});
