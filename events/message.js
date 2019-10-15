@@ -35,6 +35,7 @@ const konata = require('../commands/konata')
 const krisku = require('../commands/krisku')
 const kyonko = require('../commands/kyonko')
 const lewd = require('../commands/lewd')
+const list = require('../commands/list')
 const mackie = require('../commands/mackie')
 const maho = require('../commands/maho')
 const mashrep = require('../commands/mashrep')
@@ -114,7 +115,7 @@ module.exports = (client, message) => {
 		return crazi77(message)
 	}
 	if (message.content.startsWith('$cuddle')) {
-		return cuddle(message)
+		return message.reply(`coming soon!`)
 	}
 	if (message.content.startsWith('$cursed')) {
 		return cursed(message)
@@ -199,6 +200,9 @@ module.exports = (client, message) => {
 	}
 	if (message.content.startsWith('$lewd')) {
 		return lewd(message)
+	}
+	if (message.content.startsWith('$list')) {
+		return list(message)
 	}
 	if (message.content.startsWith('$mackie')) {
 		return mackie(message)
