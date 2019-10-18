@@ -11,9 +11,10 @@
     "dotenv": "^8.1.0",
     "enmap": "^5.2.0",
     "google-images": "^2.1.0",
-    "jimp": "^0.8.0",
+    "jimp": "^0.8.5",
     "node-google-image-search": "^1.0.3",
     "node-gyp": "^6.0.0",
+    "nodemon": "^1.19.4",
     "rebuild": "^0.1.2"
   },
   "devDependencies": {

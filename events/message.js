@@ -16,7 +16,6 @@ const fuck = require ('../commands/fuck')
 const gay = require('../commands/gay')
 const gm = require('../commands/gm')
 const gn = require('../commands/gn')
-const googleimage = require('../commands/googleimage')
 const handhold = require('../commands/handhold')
 const hansen = require('../commands/hansen')
 const hello = require('../commands/hello')
@@ -152,9 +151,6 @@ module.exports = (client, message) => {
 	}
 	if (message.content.startsWith('$gn')) {
 		return gn(message)
-	}
-	if (message.content.startsWith('$img')) {
-		return googleimage(message)
 	}
 	if (message.content.startsWith('$hh')) {
 		return handhold(message)
