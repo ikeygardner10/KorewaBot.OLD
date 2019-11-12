@@ -64,9 +64,10 @@ const smug = require('../commands/smug')
 const snorcz = require('../commands/snorcz')
 const spank = require('../commands/spank')
 const stab = require('../commands/stab')
+const succ = require('../commands/succ')
 const tights = require('../commands/tights')
 const tubby = require('../commands/tubby')
-const secretmemenoedenallowed = require('../commands/secretmemenoedenallowed')
+const video = require('../commands/video')
 const vanessa = require('../commands/vanessa')
 const vore = require('../commands/vore')
 const waifu = require('../commands/waifu')
@@ -86,15 +87,15 @@ module.exports = (client, message) => {
 //	if (message.content.includes('Nigga')) {
 //		return nword(message)
 //	}
-	if (message.content.startsWith('gn')) {
-		return message.reply(`goodnight! :kissing_heart:`)
-	}
-	if (message.content.startsWith('Gn')) {
-		return message.reply(`goodnight! :kissing_heart:`)
-	}
-	if (message.content.startsWith('GN')) {
-		return message.reply(`goodnight! :kissing_heart:`)
-	}
+//	if (message.content.startsWith('gn')) {
+//		return message.reply(`goodnight! :kissing_heart:`)
+//	}
+//	if (message.content.startsWith('Gn')) {
+//		return message.reply(`goodnight! :kissing_heart:`)
+//	}
+//	if (message.content.startsWith('GN')) {
+//		return message.reply(`goodnight! :kissing_heart:`)
+//	}
 	if (message.content.startsWith('$vanessa')) {
 		return vanessa(message)
 	}
@@ -293,6 +294,9 @@ module.exports = (client, message) => {
 	if (message.content.startsWith('$stab')) {
 		return stab(message)
 	}
+	if (message.content.startsWith('$succ')) {
+		return succ(message)
+	}
 	if (message.content.startsWith('$tights')) {
 		return tights(message)
 	}
@@ -302,8 +306,8 @@ module.exports = (client, message) => {
 	if (message.content.startsWith('$unban')) {
 		return unban(message)
 	}
-	if (message.content.startsWith('$secretmemenoedenallowed')) {
-		return secretmemenoedenallowed(message)
+	if (message.content.startsWith('$video')) {
+		return video(message)
 	}
 	if (message.content.includes('$vore')) {
 		return vore(message)
