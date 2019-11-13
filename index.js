@@ -6,7 +6,6 @@ const client = new Discord.Client({
     disableEveryone: true,
     disabledEvents: ['TYPING_START']
 })
-const guildNames = client.guilds.array();
 require('dotenv').config()
 
 client.on("message", async message => {
