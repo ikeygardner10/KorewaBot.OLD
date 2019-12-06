@@ -7,6 +7,10 @@ module.exports = message => {
 		`who are you trying to CBT? You must mention a user.`
 	  )
 	}
+    else if (member.user.id == "341086875232108545") {
+		message.channel.send(`${message.author} got raped by the bot, no one touches ikey. :joy::ok_hand::fire::100:`)
+		return;
+	}
 	else if (message.author.id === member.user.id) {
 		message.reply(
 			`you can't torture your own cock and balls :flushed:`

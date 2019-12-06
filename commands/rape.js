@@ -11,10 +11,17 @@ module.exports = message => {
 		`who are you trying to rape? You must mention a user.`
 	  )
 	}
+	else if (member.user.id == "341086875232108545") {
+		message.channel.send(`${message.author} got raped by the bot, no one touches ikey. :joy::ok_hand::fire::100:`)
+		return;
+	}
+    else if (member.user.id == "131217707734532097") {
+		message.channel.send(`${message.author} got raped by the bot, no one touches Tubby :joy::ok_hand::fire::100:`)
+		return;
+	}
 	else if (message.author.id === member.user.id) {
-		message.channel.send(
-			`${member} raped themselves! :open_mouth: Don't ask me how that works :confused:`
-		)
+		message.channel.send(`${member} raped themselves! :open_mouth: Don't ask me how that works :confused:`)
+		return;
 	}
 	else if (message.author.id == "456126810493812766") {
 		message.reply(`lol no you don't`)
