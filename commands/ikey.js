@@ -1,6 +1,6 @@
 module.exports = message => {
-	message.channel.send('FOLLOW HIS TWITTER :grin:\nhttps://twitter.com/_ikey_')
-		.then(msg => {
-			msg.react ('541751903126814721');
-		});
+	var fs = require('fs');
+	var ikey = fs.readdirSync("/home/ikey/Documents/GitHub/KorewaBot/images/Ikey/")
+	message.channel.send('Follow his twitter :pleading_face:\nhttps://twitter.com/_ikey_', {
+		file: "/home/ikey/Documents/GitHub/KorewaBot/images/Ikey/" + `${ikey[(Math.floor(Math.random() * ikey.length))]}`});
 };

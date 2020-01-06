@@ -30,9 +30,9 @@ let error1 = new Discord.RichEmbed()
 			message.channel.send(fail)
 			return;
 		}
-		return member
+		else	return member
 		.ban()
-		.then(() => message.channel.send(embed1))
+		.then(() => message.channel.send(success))
 		.catch(error => message.channel.send(error1))
 	}
 	else return;

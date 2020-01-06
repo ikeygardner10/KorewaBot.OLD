@@ -4,15 +4,18 @@ const baby = require('../commands/baby')
 const ban = require('../commands/ban')
 const bruj = require('../commands/bruj')
 const cbt = require('../commands/cbt')
+const choke = require('../commands/choke')
 const crazi77 = require('../commands/crazi77')
 const crazimo = require('../commands/crazimo')
 const cuddle = require('../commands/cuddle')
 const cursed = require('../commands/cursed')
 const cutie = require('../commands/cutie')
 const decypher = require('../commands/decypher')
+const dodge = require('../commands/dodge')
 const eden = require('../commands/eden')
 const feet = require('../commands/feet')
 const fuck = require ('../commands/fuck')
+const froyo = require('../commands/froyo')
 const gay = require('../commands/gay')
 const gm = require('../commands/gm')
 const gn = require('../commands/gn')
@@ -21,6 +24,7 @@ const hansen = require('../commands/hansen')
 const hello = require('../commands/hello')
 const help = require('../commands/help')
 const hug = require('../commands/hug')
+const icon = require('../commands/icon')
 const ikey = require('../commands/ikey')
 const info = require('../commands/info')
 const invite = require('../commands/invite')
@@ -64,11 +68,11 @@ const smug = require('../commands/smug')
 const snorcz = require('../commands/snorcz')
 const spank = require('../commands/spank')
 const stab = require('../commands/stab')
-const succ = require('../commands/succ')
+const stalin = require('../commands/stalin')
+const test = require('../commands/test')
 const tights = require('../commands/tights')
 const tubby = require('../commands/tubby')
 const video = require('../commands/video')
-const vanessa = require('../commands/vanessa')
 const vore = require('../commands/vore')
 const waifu = require('../commands/waifu')
 const welcome = require('../commands/welcome/welcome')
@@ -96,9 +100,6 @@ module.exports = (client, message) => {
 //	if (message.content.startsWith('GN')) {
 //		return message.reply(`goodnight! :kissing_heart:`)
 //	}
-	if (message.content.startsWith('$vanessa')) {
-		return vanessa(message)
-	}
 	if (message.content.startsWith('$alen')) {
 		return alen(message)
 	}
@@ -116,6 +117,9 @@ module.exports = (client, message) => {
 	}
 	if (message.content.startsWith('$cbt')) {
 		return cbt(message)
+	}
+	if (message.content.startsWith('$choke')) {
+		return choke(message)
 	}
 	if (message.content.startsWith('$crazimo')) {
 		return crazimo(message)
@@ -135,6 +139,9 @@ module.exports = (client, message) => {
 	if (message.content.startsWith('$decypher')) {
 		return decypher(message)
 	}
+    if (message.content.startsWith('$dodge')) {
+		return dodge(message)
+	}
 	if (message.content.startsWith('$eden')) {
 		return eden(message)
 	}
@@ -142,7 +149,10 @@ module.exports = (client, message) => {
 		return feet(message)
 	}
 	if (message.content.startsWith('$fuck')) {
-		return message.reply('coming soon!')
+		return fuck(message)
+	}
+	if (message.content.includes('$froyo')) {
+		return froyo(message)
 	}
 	if (message.content.startsWith('$gay')) {
 		return gay(message)
@@ -167,6 +177,9 @@ module.exports = (client, message) => {
 	}
 	if (message.content.startsWith('$hug')) {
 		return hug(message)
+	}
+	if (message.content.startsWith('$icon')) {
+		return icon(message)
 	}
 	if (message.content.startsWith('$ikey')) {
 		return ikey(message)
@@ -294,8 +307,11 @@ module.exports = (client, message) => {
 	if (message.content.startsWith('$stab')) {
 		return stab(message)
 	}
-	if (message.content.startsWith('$succ')) {
-		return succ(message)
+	if (message.content.includes('$stalin')) {
+		return stalin(message)
+	}
+    if (message.content.startsWith('$test')) {
+		return test(message)
 	}
 	if (message.content.startsWith('$tights')) {
 		return tights(message)
