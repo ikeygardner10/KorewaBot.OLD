@@ -11,18 +11,21 @@ const icon = message.guild.iconURL;
 const user = message.mentions.users.first()
 const avatar = user.displayAvatarURL || message.author.displayAvatarURL;
 let fail = new Discord.RichEmbed()
-	.setThumbnail(avatar)
+	.setThumbnail("https://imgur.com/a/qOoqxV6.png")
 	.addField(`Result:`, `I could not kick ${user.tag}.\nCheck the users roles/permissions.`)
+    .setFooter(`KorewaBot2`, "https://imgur.com/Bh2Qqyr.png")
 	.setTimestamp()
 	.setColor(0x4F5450);
 let success = new Discord.RichEmbed()
 	.setThumbnail(avatar)
 	.addField(`Result:`, `${user.tag} has been kicked`)
+    .setFooter(`KorewaBot2`, "https://imgur.com/Bh2Qqyr.png")
 	.setTimestamp()
 	.setColor(0x4F5450);
 let error1 = new Discord.RichEmbed()
 	.setThumbnail(icon)
 	.addField(`Result:`, `Sorry, an error occured.`)
+    .setFooter(`KorewaBot2`, "https://imgur.com/Bh2Qqyr.png")
 	.setTimestamp()
 	.setColor(0x4F5450);
 	

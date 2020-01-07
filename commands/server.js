@@ -7,9 +7,10 @@ const emojisTotal = message.guild.emojis.size;
 const boostTotal = message.guild.premium_subscription_count;
 let tcount = message.guild.channels.filter(c => c.type === 'text').size;
 let vcount = message.guild.channels.filter(c => c.type === 'voice').size;
+const icon = message.guild.iconURL;
 
 const embed = new Discord.RichEmbed()
-	.setAuthor(`Server Information 😜`, "https://i.imgur.com/7Wy9aSB.png")
+	.setAuthor(`${message.guild.name} Information`, icon)
 	.setThumbnail(`${message.guild.iconURL}`)
 	.addField(`Name`, `${message.guild.name}`, true)
 	.addField(`ID`, `${message.guild.id}`, true)
@@ -25,7 +26,7 @@ const embed = new Discord.RichEmbed()
 	.addField(`Bot Count`, `${botsTotal}`, true)
 	.addField(`Text Channels`, `${tcount}`, true)
 	.addField(`Voice Channels`, `${vcount}`, true)
-	.setFooter(`KorewaBot`, "https://i.imgur.com/7Wy9aSB.png")
+	.setFooter(`KorewaBot2`, "https://imgur.com/Bh2Qqyr.png")
 	.setTimestamp()
 	.setColor(0xFF2E2E);
 

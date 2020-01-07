@@ -17,7 +17,7 @@ if (milliseconds > 0) segments.push(milliseconds + 'ms' + ((seconds == 1) ? '' :
 const dateString = segments.join(', ');
 
 const embed1 = new Discord.RichEmbed()
-	.setAuthor(`KorewaBot | 酒`, "https://i.imgur.com/7Wy9aSB.png")
+	.setAuthor(`KorewaBot2`, "https://imgur.com/Bh2Qqyr.png")
 	.addField(`Prefix`, `$`, true)
 	.addField(`Command List`, `[Link](https://ikeygardner10.github.io/)`, true)
 	.addField(`Support Server`, `[Soundcloud 2.0](https://discord.gg/GQh6XEk)`, true)
@@ -34,12 +34,12 @@ const embed1 = new Discord.RichEmbed()
 	.addBlankField()
 	.addField(`Twitter`, `[@_ikey_](https://twitter.com/_ikey_)\n[@_sair_](https://twitter.com/kibashippuden1)`, true)
 	.addField(`Snapchat`, `ikeygardner10\nsarozkader`, true)
-	.setFooter("Suggestions go in the creators/support server", "https://i.imgur.com/7Wy9aSB.png")
+	.setFooter("Suggestions go in the creators/support server", "https://imgur.com/Bh2Qqyr.png")
 	.setTimestamp()
 	.setColor(0x4F5450);
 	
 const embed2 = new Discord.RichEmbed()
-	.setAuthor(`KorewaBot | 酒`, "https://i.imgur.com/7Wy9aSB.png")
+	.setAuthor(`KorewaBot2`, "https://imgur.com/Bh2Qqyr.png")
 	.addField(`Prefix`, `$`, true)
 	.addField(`Command List`, `[Link](https://ikeygardner10.github.io/)`, true)
 	.addField(`Support Server`, `[Soundcloud 2.0](https://discord.gg/GQh6XEk)`, true)
@@ -49,7 +49,7 @@ const embed2 = new Discord.RichEmbed()
 	.addBlankField()
 	.addField(`Twitter`, `[@_ikey_](https://twitter.com/_ikey_)\n[@_sair_](https://twitter.com/kibashippuden1)`, true)
 	.addField(`Snapchat`, `ikeygardner10\nsarozkader`, true)
-	.setFooter("Suggestions go in the creators/support server", "https://i.imgur.com/7Wy9aSB.png")
+	.setFooter("Suggestions go in the creators/support server", "https://imgur.com/Bh2Qqyr.png")
 	.setTimestamp()
 	.setColor(0x4F5450);
 
