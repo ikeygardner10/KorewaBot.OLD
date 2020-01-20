@@ -7,6 +7,12 @@ const client = new Discord.Client({
     disabledEvents: ['TYPING_START']
 })
 require('dotenv').config()
+let cooldown = new Set();
+
+function catchErr (err, message) {
+	client.users.get("341086875232108545").send("There was an error at channel" + message.channel + "in guild" +message.guild);
+	client.users.get("341086875232108545").send("ERROR ```" + err + "```");
+}
 
 client.on("message", async message => {
     if(message.author.bot || message.system) return; // Ignore bots

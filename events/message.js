@@ -5,6 +5,7 @@ const ban = require('../commands/ban')
 const bruj = require('../commands/bruj')
 const cbt = require('../commands/cbt')
 const choke = require('../commands/choke')
+const cock = require('../commands/cock')
 const crazi77 = require('../commands/crazi77')
 const crazimo = require('../commands/crazimo')
 const cuddle = require('../commands/cuddle')
@@ -13,6 +14,7 @@ const cutie = require('../commands/cutie')
 const decypher = require('../commands/decypher')
 const dodge = require('../commands/dodge')
 const eden = require('../commands/eden')
+const doggless = require('../commands/doggless')
 const feet = require('../commands/feet')
 const fuck = require ('../commands/fuck')
 const froyo = require('../commands/froyo')
@@ -41,10 +43,12 @@ const lewd = require('../commands/lewd')
 const list = require('../commands/list')
 const mackie = require('../commands/mackie')
 const maho = require('../commands/maho')
+const mario = require('../commands/mario')
 const mashrep = require('../commands/mashrep')
 const megaflamerp = require('../commands/megaflamerp')
 const meme = require('../commands/meme')
 const memri = require('../commands/memri')
+const mercy = require('../commands/mercy')
 const monkey = require('../commands/monkey')
 const naenae = require('../commands/naenae')
 const nword = require('../commands/nword')
@@ -76,7 +80,6 @@ const video = require('../commands/video')
 const vore = require('../commands/vore')
 const waifu = require('../commands/waifu')
 const welcome = require('../commands/welcome/welcome')
-const yes = require('../commands/yes')
 
 module.exports = (client, message) => {
 //	if (message.content.includes('nigger')) {
@@ -121,6 +124,9 @@ module.exports = (client, message) => {
 	if (message.content.startsWith('$choke')) {
 		return choke(message)
 	}
+    if (message.content.startsWith('$cock')) {
+		message.channel.send("Disabled cuz y'all are retards")
+	}
 	if (message.content.startsWith('$crazimo')) {
 		return crazimo(message)
 	}
@@ -144,6 +150,9 @@ module.exports = (client, message) => {
 	}
 	if (message.content.startsWith('$eden')) {
 		return eden(message)
+	}
+    if (message.content.startsWith('$doggless')) {
+		return doggless(message)
 	}
 	if (message.content.includes('$feet')) {
 		return feet(message)
@@ -229,6 +238,9 @@ module.exports = (client, message) => {
 	if (message.content.startsWith('$maho')) {
 		return maho(message)
 	}
+    if (message.content.startsWith('$mario')) {
+		return;
+	}
 	if (message.content.startsWith('$mashrep')) {
 		return mashrep(message)
 	}
@@ -240,6 +252,9 @@ module.exports = (client, message) => {
 	}
 	if (message.content.startsWith('$memri')) {
 		return memri(message)
+	}
+    if (message.content.startsWith('$mercy')) {
+		return mercy(message)
 	}
 	if (message.content.startsWith('$monkey')) {
 		return monkey(message)
@@ -322,7 +337,7 @@ module.exports = (client, message) => {
 	if (message.content.startsWith('$unban')) {
 		return unban(message)
 	}
-	if (message.content.startsWith('$video')) {
+	if (message.content.startsWith('$webm')) {
 		return video(message)
 	}
 	if (message.content.includes('$vore')) {
@@ -333,8 +348,5 @@ module.exports = (client, message) => {
 	}
 	if (message.content.startsWith('$welcome')) {
 		return welcome(message)
-	}
-	if (message.content.startsWith('$yes')) {
-		return yes(message)
 	}
 }

@@ -3,7 +3,7 @@ var fs = require('fs');
 var fuck = fs.readdirSync("/home/ikey/Documents/GitHub/KorewaBot/images/Fuck/")
 const member = message.mentions.members.first();
 const author = message.author;
-const filter = m => m.content.toLowerCase().includes('yes') && m.author.id === member.id;
+	
 	if(!message.channel.nsfw){
      	return message.reply('you must be in a channel marked NSFW to use this command.')
     }
@@ -15,10 +15,19 @@ const filter = m => m.content.toLowerCase().includes('yes') && m.author.id === m
 	}
 	
 	message.channel.send(`${member}, ${author} wants to fuck... <:omgomgomg:621117976040439808> Do you accept!? :flushed: (yes/no)`).then(() => {
-		message.channel.awaitMessages(filter, { maxMatches: 1, time: 15000, errors: ['time'] }) 
+		message.channel.awaitMessages(response => response.content == 'yes' && response.author.id === member.id || response.content == 'no' && response.author.id === member.id, {
+			max: 1,
+            time: 15000,
+            errors: ['time'],
+            })
 			.then(collected => {
-				message.channel.send(`${member} & ${author}, hot! :weary:`, {
+				if (collected.first().content == 'yes') {
+					message.channel.send(`${member} & ${author}, hot! :weary:`, {
 					file: "/home/ikey/Documents/GitHub/KorewaBot/images/Fuck/" + `${fuck[(Math.floor(Math.random() * fuck.length))]}`});
+				}
+				else if(collected.first().content == 'no') {
+                    message.channel.send(`${member} said no :sob: :broken_heart:`);
+                }
 			})
 			.catch(collected => {
 				message.channel.send(`No response :pensive: (15 second time out)`)

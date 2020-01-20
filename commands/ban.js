@@ -1,42 +1,35 @@
 module.exports = message => {
+
 const Discord = require('discord.js');
-const member = message.mentions.members.first();
+let bUser = message.guild.member(message.mentions.users.first());
+if (!bUser) return message.channel.send("Could not find that user!");
+let user = message.mentions.users.first() || message.author;
+let  avatar = user.displayAvatarURL;
 
-	if (message.member.hasPermission("BAN_MEMBERS")) {
-		if (!member) {
-			return;
-		}
-
-const icon = message.guild.iconURL;
-const user = message.mentions.users.first()
-const avatar = user.displayAvatarURL || message.author.displayAvatarURL;
 let fail = new Discord.RichEmbed()
-	.setThumbnail(avatar)
-	.addField(`Result:`, `I could not ban ${user.tag}.\nCheck the users roles/permissions.`)
-    .setFooter(`KorewaBot2`, "https://imgur.com/Bh2Qqyr.png")
+	.setThumbnail("https://imgur.com/a/qOoqxV6.png")
+	.addField("Result:", `I could not ban ${bUser}.\nCheck the users roles/permissions.`)
+    .setFooter("KorewaBot2", "https://imgur.com/Bh2Qqyr.png")
 	.setTimestamp()
 	.setColor(0x4F5450);
 let success = new Discord.RichEmbed()
 	.setThumbnail(avatar)
-	.addField(`Result:`, `${user.tag} has been banned`)
-    .setFooter(`KorewaBot2`, "https://imgur.com/Bh2Qqyr.png")
+	.addField("Result:", `${bUser} (ID: ${bUser.id}) has been banned`)
+	.addField("baned By", `<@${message.author.id}>`)
+    .setFooter("KorewaBot2", "https://imgur.com/Bh2Qqyr.png")
 	.setTimestamp()
 	.setColor(0x4F5450);
 let error1 = new Discord.RichEmbed()
-	.setThumbnail(icon)
-	.addField(`Result:`, `Sorry, an error occured.`)
-    .setFooter(`KorewaBot2`, "https://imgur.com/Bh2Qqyr.png")
+	.setThumbnail("https://imgur.com/a/qOoqxV6.png")
+	.addField("Result:", "Sorry, an error occured.")
+    .setFooter("KorewaBot2", "https://imgur.com/Bh2Qqyr.png")
 	.setTimestamp()
 	.setColor(0x4F5450);
 	
-		if (!member.bannable) {
-			message.channel.send(fail)
-			return;
-		}
-		else	return member
-		.ban()
-		.then(() => message.channel.send(success))
-		.catch(error => message.channel.send(error1))
-	}
-	else return;
+	if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("you do not have permissions!");
+	if(bUser.hasPermission("MANAGE_MESSAGES")) return message.channel.send(fail);
+	return bUser
+	.ban()
+	.then(() => message.channel.send(success))
+	.catch(error => message.channel.send(error1))
 }
