@@ -25,6 +25,8 @@ const handhold = require('../commands/handhold')
 const hansen = require('../commands/hansen')
 const hello = require('../commands/hello')
 const help = require('../commands/help')
+const highfive = require('../commands/highfive')
+const hotdog = require('../commands/hotdog')
 const hug = require('../commands/hug')
 const icon = require('../commands/icon')
 const ikey = require('../commands/ikey')
@@ -50,11 +52,13 @@ const meme = require('../commands/meme')
 const memri = require('../commands/memri')
 const mercy = require('../commands/mercy')
 const monkey = require('../commands/monkey')
+const munch = require('../commands/munch')
 const naenae = require('../commands/naenae')
 const nword = require('../commands/nword')
 const paradise = require('../commands/paradise')
-const pet = require('../commands/pet')
+const pet = require('../commands/pat')
 const poopies = require('../commands/poopies')
+const profile = require('../commands/profile')
 const punch = require('../commands/punch')
 const purge = require('../commands/purge')
 const pururin = require('../commands/pururin')
@@ -80,6 +84,7 @@ const video = require('../commands/video')
 const vore = require('../commands/vore')
 const waifu = require('../commands/waifu')
 const welcome = require('../commands/welcome/welcome')
+const yandere = require('../commands/yanderedev')
 
 module.exports = (client, message) => {
 //	if (message.content.includes('nigger')) {
@@ -125,7 +130,7 @@ module.exports = (client, message) => {
 		return choke(message)
 	}
     if (message.content.startsWith('$cock')) {
-		message.channel.send("Disabled cuz y'all are retards")
+		return cock(message)
 	}
 	if (message.content.startsWith('$crazimo')) {
 		return crazimo(message)
@@ -184,6 +189,12 @@ module.exports = (client, message) => {
 	if (message.content.startsWith('$help')) {
 		return help(message)
 	}
+    if (message.content.startsWith('$highfive')) {
+		return highfive(message)
+	}
+    if (message.content.startsWith('$hotdog')) {
+		return hotdog(message)
+	}
 	if (message.content.startsWith('$hug')) {
 		return hug(message)
 	}
@@ -239,7 +250,7 @@ module.exports = (client, message) => {
 		return maho(message)
 	}
     if (message.content.startsWith('$mario')) {
-		return;
+		return mario(message)
 	}
 	if (message.content.startsWith('$mashrep')) {
 		return mashrep(message)
@@ -259,17 +270,23 @@ module.exports = (client, message) => {
 	if (message.content.startsWith('$monkey')) {
 		return monkey(message)
 	}
+    if (message.content.startsWith('$munch')) {
+		return munch(message)
+	}
 	if (message.content.startsWith('$nae')) {
 		return naenae(message)
 	}
 	if (message.content.startsWith('$paradise')) {
 		return paradise(message)
 	}
-	if (message.content.startsWith('$pet')) {
+	if (message.content.startsWith('$pat')) {
 		return pet(message)
 	}
 	if (message.content.startsWith('$poop')) {
 		return poopies(message)
+	}
+    if (message.content.startsWith('$profile')) {
+		return profile(message)
 	}
 	if (message.content.startsWith('$punch')) {
 		return punch(message)
@@ -348,5 +365,8 @@ module.exports = (client, message) => {
 	}
 	if (message.content.startsWith('$welcome')) {
 		return welcome(message)
+	}
+    if (message.content.startsWith('$yandere')) {
+		return yandere(message)
 	}
 }

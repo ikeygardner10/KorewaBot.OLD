@@ -5,8 +5,6 @@ const activities_list = [
     "$help", 
     `${servers} servers`,
 	`${users} users`,
-    "NEW FUCK CMD!",
-    "NEW CHOKE CMD!",
     ];
     setInterval(() => {
         const index = Math.floor(Math.random() * (activities_list.length - 1) + 1);

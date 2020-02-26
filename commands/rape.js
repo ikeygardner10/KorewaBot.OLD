@@ -19,6 +19,17 @@ module.exports = message => {
 		message.channel.send(`${message.author} got raped by the bot, no one touches Tubby :joy::ok_hand::fire::100:`)
 		return;
 	}
+	else if (member.user.id == "210974689302937601") {
+		if (message.author.id == "341086875232108545") {
+			message.channel.send("I can't rape either, what do I do? :confounded:")
+			return;
+		}
+		else {
+			message.channel.send(`${message.author} got raped by the bot, no one touches Crazimo :joy::ok_hand::fire::100:`)
+			return;
+		}
+	return;
+	}
 	else if (message.author.id === member.user.id) {
 		message.channel.send(`${member} raped themselves! :open_mouth: Don't ask me how that works :confused:`)
 		return;

@@ -1,5 +1,5 @@
 module.exports = message => {
-var used = false;
+if (message.author.id == "341086875232108545") {
 	message.channel.send({
 	file: "/home/ikey/Documents/GitHub/KorewaBot/images/Mario/mario1.jpeg"})
 		.then(() =>
@@ -17,8 +17,8 @@ var used = false;
 								message.channel.send({
 								file: "/home/ikey/Documents/GitHub/KorewaBot/images/Mario/mario4.jpeg"})
 							}, 14500));
-	used = true;
-	setTimeout(() => {
-		used = false;
-	}, 1000 * 30);
 }
+else {
+	message.reply("ikey only :slight_smile:")
+};
+};

@@ -1,28 +1,34 @@
 module.exports = message => {
 
 const Discord = require('discord.js');
-let kUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-if (!kUser) return message.channel.send("Could not find that user!");
+let kUser = message.guild.member(message.mentions.users.first());
+let error2 = new Discord.RichEmbed()
+	.setThumbnail("https://i.imgur.com/Bh2Qqyr.png")
+	.addField("Result:", "No user was mentioned.")
+    .setFooter("KorewaBot2", "https://i.imgur.com/Bh2Qqyr.png")
+	.setTimestamp()
+	.setColor(0x4F5450);
+if (!kUser) return message.channel.send(error2);
 let user = message.mentions.users.first() || message.author;
 let  avatar = user.displayAvatarURL;
 
 let fail = new Discord.RichEmbed()
-	.setThumbnail("https://imgur.com/a/qOoqxV6.png")
+	.setThumbnail("https://i.imgur.com/Bh2Qqyr.png")
 	.addField("Result:", `I could not kick ${kUser}.\nCheck the users roles/permissions.`)
-    .setFooter("KorewaBot2", "https://imgur.com/Bh2Qqyr.png")
+    .setFooter("KorewaBot2", "https://i.imgur.com/Bh2Qqyr.png")
 	.setTimestamp()
 	.setColor(0x4F5450);
 let success = new Discord.RichEmbed()
 	.setThumbnail(avatar)
 	.addField("Result:", `${kUser} (ID: ${kUser.id}) has been kicked`)
 	.addField("Kicked By", `<@${message.author.id}>`)
-    .setFooter("KorewaBot2", "https://imgur.com/Bh2Qqyr.png")
+    .setFooter("KorewaBot2", "https://i.imgur.com/Bh2Qqyr.png")
 	.setTimestamp()
 	.setColor(0x4F5450);
 let error1 = new Discord.RichEmbed()
-	.setThumbnail("https://imgur.com/a/qOoqxV6.png")
+	.setThumbnail("https://i.imgur.com/Bh2Qqyr.png")
 	.addField("Result:", "Sorry, an error occured.")
-    .setFooter("KorewaBot2", "https://imgur.com/Bh2Qqyr.png")
+    .setFooter("KorewaBot2", "https://i.imgur.com/Bh2Qqyr.png")
 	.setTimestamp()
 	.setColor(0x4F5450);
 	

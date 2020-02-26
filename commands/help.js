@@ -7,4 +7,4 @@ let embed1 = new Discord.RichEmbed()
 	
 	message.author.send(embed1)
 	return;
-}
+};
