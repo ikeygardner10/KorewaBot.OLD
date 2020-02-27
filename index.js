@@ -2,12 +2,7 @@ const fs = require('fs')
 const config = require('./config.json')
 const Discord = require('discord.js')
 const Jimp = require('jimp')
-const client = new Discord.Client({
-    disableEveryone: true,
-    disabledEvents: ['TYPING_START']
-})
-require('dotenv').config()
-let cooldown = new Set();
+const client = new Discord.Client({ fetchAllMembers: true, sync: true })
 
 function catchErr (err, message) {
 	client.users.get("341086875232108545").send("There was an error at channel" + message.channel + "in guild" +message.guild);
