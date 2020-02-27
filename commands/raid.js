@@ -10,7 +10,7 @@ var raid = fs.readdirSync("/home/ikey/Documents/GitHub/KorewaBot/images/Raid/")
 	else if (message.author.id === member.user.id) {
 		message.reply(
 			`you swatted yourself... <:NeutralClown:605078235545600026>`, {
-				file: "/home/ikey/Documents/GitHub/KorewaBot/images/raid.gif"
+				file: "/home/ikey/Documents/GitHub/KorewaBot/images/selfraid.gif"
 		})
 	}
 	else {

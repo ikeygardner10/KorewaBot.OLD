@@ -9,7 +9,7 @@ module.exports = message => {
 	}
 	else if (message.author.id === member.user.id) {
 		message.reply(`you tried to spank yourself, you loner :joy:`, {
-		file: "/home/ikey/Documents/GitHub/KorewaBot/images/spankself.jpg"
+		file: "/home/ikey/Documents/GitHub/KorewaBot/images/selfspank.jpg"
 		});
 	}
 	else {

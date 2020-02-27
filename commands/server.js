@@ -17,7 +17,7 @@ const verificationLevel = {
 	3: "High",
 	4: "Very High",
 };
-const randomColor = "#000000".replace(/0/g, function () { return (~~(Math.random() * 16)).toString(16); }); 
+const randomColor = "#000000".replace(/0/g, function () { return (~~(Math.random() * 16)).toString(16); });
 
 const embed = new Discord.RichEmbed()
 	.setAuthor(`${message.guild.name}`, icon)

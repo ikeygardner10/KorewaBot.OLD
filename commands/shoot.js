@@ -9,7 +9,7 @@ module.exports = message => {
 	}
 	else if (message.author.id === member.user.id) {
 		message.reply(`you tried to shoot yourself, you miserable idiot :joy:`, {
-		file: "/home/ikey/Documents/GitHub/KorewaBot/images/shootself.gif"
+		file: "/home/ikey/Documents/GitHub/KorewaBot/images/selfshoot.gif"
 		});
 	}
 	else {

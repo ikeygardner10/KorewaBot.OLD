@@ -2,11 +2,7 @@ module.exports = message => {
 	const member = message.mentions.members.first()
 	var fs = require('fs');
 	var rape = fs.readdirSync("/home/ikey/Documents/GitHub/KorewaBot/images/Rape/")
-	//if (message.member.highestRole.id == "540347917358071818") {
-	//	message.reply(`no rape for first years! Too young! :triumph:`)
-	//	return;
-	//}
-	if (!member) {
+		if (!member) {
 	  return message.reply(
 		`who are you trying to rape? You must mention a user.`
 	  )
@@ -15,27 +11,8 @@ module.exports = message => {
 		message.channel.send(`${message.author} got raped by the bot, no one touches ikey. :joy::ok_hand::fire::100:`)
 		return;
 	}
-    else if (member.user.id == "131217707734532097") {
-		message.channel.send(`${message.author} got raped by the bot, no one touches Tubby :joy::ok_hand::fire::100:`)
-		return;
-	}
-	else if (member.user.id == "210974689302937601") {
-		if (message.author.id == "341086875232108545") {
-			message.channel.send("I can't rape either, what do I do? :confounded:")
-			return;
-		}
-		else {
-			message.channel.send(`${message.author} got raped by the bot, no one touches Crazimo :joy::ok_hand::fire::100:`)
-			return;
-		}
-	return;
-	}
 	else if (message.author.id === member.user.id) {
 		message.channel.send(`${member} raped themselves! :open_mouth: Don't ask me how that works :confused:`)
-		return;
-	}
-	else if (message.author.id == "456126810493812766") {
-		message.reply(`lol no you don't`)
 		return;
 	}
 	else {

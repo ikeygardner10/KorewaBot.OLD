@@ -15,6 +15,7 @@ if (minutes > 0) segments.push(minutes + 'm' + ((minutes == 1) ? '' : ''));
 if (seconds > 0) segments.push(seconds + 's' + ((seconds == 1) ? '' : ''));
 if (milliseconds > 0) segments.push(milliseconds + 'ms' + ((seconds == 1) ? '' : ''));
 const dateString = segments.join(', ');
+const randomColor = "#000000".replace(/0/g, function () { return (~~(Math.random() * 16)).toString(16); });
 
 const embed1 = new Discord.RichEmbed()
 	.setAuthor(`KorewaBot2`, "https://imgur.com/Bh2Qqyr.png")
@@ -36,7 +37,7 @@ const embed1 = new Discord.RichEmbed()
 	.addField(`Snapchat`, `ikeygardner10\nsarozkader`, true)
 	.setFooter("Suggestions go in the creators/support server", "https://imgur.com/Bh2Qqyr.png")
 	.setTimestamp()
-	.setColor(0x4F5450);
+	.setColor(randomColor);
 	
 const embed2 = new Discord.RichEmbed()
 	.setAuthor(`KorewaBot2`, "https://imgur.com/Bh2Qqyr.png")
@@ -51,7 +52,7 @@ const embed2 = new Discord.RichEmbed()
 	.addField(`Snapchat`, `ikeygardner10\nsarozkader`, true)
 	.setFooter("Suggestions go in the creators/support server", "https://imgur.com/Bh2Qqyr.png")
 	.setTimestamp()
-	.setColor(0x4F5450);
+	.setColor(randomColor);
 
 	if (message.author.id === "341086875232108545") {
 		message.channel.send(embed1)
@@ -60,5 +61,5 @@ const embed2 = new Discord.RichEmbed()
 	else {
 		message.channel.send(embed2)
 		return;
-	}
-}
+	};
+};
