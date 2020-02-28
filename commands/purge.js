@@ -6,7 +6,7 @@ let amount = parseInt(message.content.slice(command.length));
 	}
 	if(!amount) return message.reply(`you didn't specify an amount`);
 	if(isNaN(amount)) return message.reply(`that amount isn't a number.`);
-	if(amount > 100) return message.reply(`you cannot delete more than 100 messages at once.`);
+	if(amount > 99) return message.reply(`you cannot delete more than 99 messages at once.`);
 	if(amount < 1) return message.reply(`you have to delete at least 1 message.`);
 	
 	message.channel.bulkDelete(amount + 1)

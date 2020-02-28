@@ -6,6 +6,7 @@ const crazimo = require('../commands/crazimo')
 const cutie = require('../commands/cutie')
 const dodge = require('../commands/dodge')
 const doggless = require('../commands/doggless')
+const emojis = require('../commands/emojis')
 const feet = require('../commands/feet')
 const fuck = require ('../commands/fuck')
 const handhold = require('../commands/handhold')
@@ -60,6 +61,9 @@ module.exports = (client, message) => {
 	}
     if (message.content.startsWith('$doggless')) {
 		return doggless(message)
+	}
+	if (message.content.startsWith('$emojis')) {
+		return emojis(message)
 	}
 	if (message.content.includes('$feet')) {
 		return feet(message)

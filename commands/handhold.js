@@ -18,7 +18,7 @@ const author = message.author;
             errors: ['time'],
             })
 			.then((collected) => {
-                if (collected.first().content == 'yes') {
+                if (collected.first().content.toLowerCase() == 'yes') {
                     message.channel.send(`${member} & ${author}, cute! :heart:`, {
 					file: "/home/ikey/Documents/GitHub/KorewaBot/images/HandHold/" + `${hh[(Math.floor(Math.random() * hh.length))]}`});
                 }
