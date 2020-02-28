@@ -1,7 +1,7 @@
 module.exports = message => {
 	const member = message.mentions.members.first()
 	var fs = require('fs');
-	var choke = fs.readdirSync("/home/ikey/Documents/GitHub/KorewaBot/images/Choke/")
+	var choke = fs.readdirSync("/home/ikey/Documents/Git/KorewaBot/images/Choke/")
 	if (!member) {
 	  return message.reply(
 		`who are you trying to choke? You must mention a user.`
@@ -17,7 +17,7 @@ module.exports = message => {
 	}
 	else {
 		message.reply(`you choked ${member}! :drool: :weary:`, {
-		file: "/home/ikey/Documents/GitHub/KorewaBot/images/Choke/" + `${choke[(Math.floor(Math.random() * choke.length))]}`});
+		file: "/home/ikey/Documents/Git/KorewaBot/images/Choke/" + `${choke[(Math.floor(Math.random() * choke.length))]}`});
 		return;
 	}
 }

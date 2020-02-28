@@ -1,6 +1,6 @@
 module.exports = message => {
 var fs = require('fs');
-var hh = fs.readdirSync("/home/ikey/Documents/GitHub/KorewaBot/images/HandHold/")
+var hh = fs.readdirSync("/home/ikey/Documents/Git/KorewaBot/images/HandHold/")
 const member = message.mentions.members.first();
 const author = message.author;
 
@@ -20,7 +20,7 @@ const author = message.author;
 			.then((collected) => {
                 if (collected.first().content.toLowerCase() == 'yes') {
                     message.channel.send(`${member} & ${author}, cute! :heart:`, {
-					file: "/home/ikey/Documents/GitHub/KorewaBot/images/HandHold/" + `${hh[(Math.floor(Math.random() * hh.length))]}`});
+					file: "/home/ikey/Documents/Git/KorewaBot/images/HandHold/" + `${hh[(Math.floor(Math.random() * hh.length))]}`});
                 }
                 else if(collected.first().content == 'no') {
                     message.channel.send(`${member} said no :sob: :broken_heart:`);

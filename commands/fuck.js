@@ -1,6 +1,6 @@
 module.exports = message => {
 var fs = require('fs');
-var fuck = fs.readdirSync("/home/ikey/Documents/GitHub/KorewaBot/images/Fuck/")
+var fuck = fs.readdirSync("/home/ikey/Documents/Git/KorewaBot/images/Fuck/")
 const member = message.mentions.members.first();
 const author = message.author;
 	
@@ -23,7 +23,7 @@ const author = message.author;
 			.then(collected => {
 				if (collected.first().content == 'yes') {
 					message.channel.send(`${member} & ${author}, hot! :weary:`, {
-					file: "/home/ikey/Documents/GitHub/KorewaBot/images/Fuck/" + `${fuck[(Math.floor(Math.random() * fuck.length))]}`});
+					file: "/home/ikey/Documents/Git/KorewaBot/images/Fuck/" + `${fuck[(Math.floor(Math.random() * fuck.length))]}`});
 				}
 				else if(collected.first().content == 'no') {
                     message.channel.send(`${member} said no :sob: :broken_heart:`);

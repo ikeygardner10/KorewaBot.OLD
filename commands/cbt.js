@@ -1,7 +1,7 @@
 module.exports = message => {
 	const member = message.mentions.members.first()
 	var fs = require('fs');
-	var cbt = fs.readdirSync("/home/ikey/Documents/GitHub/KorewaBot/images/CBT/")
+	var cbt = fs.readdirSync("/home/ikey/Documents/Git/KorewaBot/images/CBT/")
 	if (!member) {
 	  return message.reply(
 		`who are you trying to CBT? You must mention a user.`
@@ -18,7 +18,7 @@ module.exports = message => {
 	}
 	else {
 		message.reply(`you tortured ${member}'s cock and balls :flushed: :drooling_face:`, {
-		file: "/home/ikey/Documents/GitHub/KorewaBot/images/CBT/" + `${cbt[(Math.floor(Math.random() * cbt.length))]}`});
+		file: "/home/ikey/Documents/Git/KorewaBot/images/CBT/" + `${cbt[(Math.floor(Math.random() * cbt.length))]}`});
 		return;
   }
 }

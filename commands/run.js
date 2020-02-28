@@ -1,10 +1,10 @@
 module.exports = message => {
 	const member = message.mentions.members.first()
 	var fs = require('fs');
-	var run = fs.readdirSync("/home/ikey/Documents/GitHub/KorewaBot/images/Run/")
+	var run = fs.readdirSync("/home/ikey/Documents/Git/KorewaBot/images/Run/")
 	if (!member) {
 		message.channel.send(`${message.author} ran away!`, {
-		file: "/home/ikey/Documents/GitHub/KorewaBot/images/Run/" + `${run[(Math.floor(Math.random() * run.length))]}`});
+		file: "/home/ikey/Documents/Git/KorewaBot/images/Run/" + `${run[(Math.floor(Math.random() * run.length))]}`});
 		return;
 	}
 	 else if (message.author.id === member.user.id) {
@@ -13,7 +13,7 @@ module.exports = message => {
 	}
 	else {
 		message.channel.send(`${message.author} ran away from you ${member} :open_mouth:`, {
-		file: "/home/ikey/Documents/GitHub/KorewaBot/images/Run/" + `${run[(Math.floor(Math.random() * run.length))]}`});
+		file: "/home/ikey/Documents/Git/KorewaBot/images/Run/" + `${run[(Math.floor(Math.random() * run.length))]}`});
 		return;
   }
 }

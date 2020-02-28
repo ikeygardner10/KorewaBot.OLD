@@ -1,7 +1,7 @@
 module.exports = message => {
 	const member = message.mentions.members.first()
 	var fs = require('fs');
-	var kiss = fs.readdirSync("/home/ikey/Documents/GitHub/KorewaBot/images/Kiss/")
+	var kiss = fs.readdirSync("/home/ikey/Documents/Git/KorewaBot/images/Kiss/")
 	
 	if (!member) {
 	return message.reply(
@@ -15,7 +15,7 @@ module.exports = message => {
 	}
 	else {
 		message.reply(`you gave ${member} a kiss :kissing_heart:`, {
-		file: "/home/ikey/Documents/GitHub/KorewaBot/images/Kiss/" + `${kiss[(Math.floor(Math.random() * kiss.length))]}`});
+		file: "/home/ikey/Documents/Git/KorewaBot/images/Kiss/" + `${kiss[(Math.floor(Math.random() * kiss.length))]}`});
 		return;
   }
 }

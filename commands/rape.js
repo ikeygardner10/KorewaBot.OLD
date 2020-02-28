@@ -1,7 +1,7 @@
 module.exports = message => {
 	const member = message.mentions.members.first()
 	var fs = require('fs');
-	var rape = fs.readdirSync("/home/ikey/Documents/GitHub/KorewaBot/images/Rape/")
+	var rape = fs.readdirSync("/home/ikey/Documents/Git/KorewaBot/images/Rape/")
 		if (!member) {
 	  return message.reply(
 		`who are you trying to rape? You must mention a user.`
@@ -17,7 +17,7 @@ module.exports = message => {
 	}
 	else {
 		message.reply(`you raped ${member}! :drool: :smiling_imp:`, {
-		file: "/home/ikey/Documents/GitHub/KorewaBot/images/Rape/" + `${rape[(Math.floor(Math.random() * rape.length))]}`});
+		file: "/home/ikey/Documents/Git/KorewaBot/images/Rape/" + `${rape[(Math.floor(Math.random() * rape.length))]}`});
 		return;
 	}
 }
