@@ -26,7 +26,7 @@ const embed1 = new Discord.RichEmbed()
 	.addField(`GitHub`, `[Link](https://github.com/ikeygardner10/KorewaBot)`, true)
 	.addField(`Developer`, `[ikey.#0911](https://twitter.com/_ikey_)`, true)
 	.addBlankField()
-	.addField(`Version`, `1.0`, true)
+	.addField(`Version`, `2.0`, true)
 	.addField(`Node JS`, `12.8.1`, true)
 	.addField(`Library`, `discord.js`, true)
 	.addField(`Uptime`, `${dateString}`, true)
@@ -38,7 +38,7 @@ const embed1 = new Discord.RichEmbed()
 	.setFooter("Suggestions go in the creators/support server", "https://imgur.com/Bh2Qqyr.png")
 	.setTimestamp()
 	.setColor(randomColor);
-	
+
 const embed2 = new Discord.RichEmbed()
 	.setAuthor(`KorewaBot2`, "https://imgur.com/Bh2Qqyr.png")
 	.addField(`Prefix`, `$`, true)
