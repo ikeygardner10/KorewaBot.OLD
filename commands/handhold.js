@@ -10,7 +10,7 @@ const author = message.author;
 	if(message.author.id === member.user.id) {
 		return message.reply(`you can't hold hands with yourself... :neutral_face:`)
 	}
-	
+
 	message.channel.send(`${member}, ${author} wants to hold your hand <:omgomgomg:621117976040439808> Do you accept!? :flushed: (yes/no)`).then(() => {
 		message.channel.awaitMessages(response => response.content == 'yes' && response.author.id === member.id || response.content == 'no' && response.author.id === member.id, {
 			max: 1,

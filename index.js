@@ -4,7 +4,7 @@ const Discord = require('discord.js')
 const client = new Discord.Client({ fetchAllMembers: true, sync: true })
 
 client.on("message", async message => {
-    if(message.author.bot || message.system) return; // Ignore bots
+  if(message.author.bot || message.system) return; // Ignore bots
 	if(message.author == client.user) return;//Ignore itself
 	if(message.channel.type === 'dm') { // Direct Message
         return;//Optionally handle direct messages
