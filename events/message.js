@@ -33,7 +33,6 @@ const slap = require('../commands/slap')
 const spank = require('../commands/spank')
 const stab = require('../commands/stab')
 const tights = require('../commands/tights')
-const video = require('../commands/video')
 const vore = require('../commands/vore')
 const waifu = require('../commands/waifu')
 
@@ -142,9 +141,6 @@ module.exports = (client, message) => {
 	}
 	if (message.content.startsWith('$tights')) {
 		return tights(message)
-	}
-	if (message.content.startsWith('$webm')) {
-		return video(message)
 	}
 	if (message.content.includes('$vore')) {
 		return vore(message)
